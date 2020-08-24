@@ -1,0 +1,157 @@
+/* -- Body CSS -- */
+body {
+  font-family: 'PT-Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -- Navbar CSS -- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0;
+  background-color: #2D3639;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  font-size: 20px;
+  margin-left: 2em;
+
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0 2em 0 0;
+  height: 100%;
+}
+
+.navLinks li{
+  list-style: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5em;
+}
+
+.navLinks a:hover {
+  background: #242a2e;
+  color: #92b4dd;
+}
+
+.burger {
+  display: none;
+  margin: 0 2em 0 0;
+}
+
+.burger div {
+  width: 23px;
+  height: 2px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .navLinks{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 55px;
+    flex-direction: column;
+    background-color: #2D3639;
+    margin: 0;
+  }
+  .navLinks li {
+    width: 100%;
+  }
+  .navLinks a{
+    width: 100%;
+  }
+}
+
+/* -- Hero Image CSS -- */
+
+.heroImage {
+  height: 100vh;
+  background-image: url(../resources/HeroImageLarge.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroTextBox {
+  display: flex;
+  height:100%;
+  width: 100%;
+  flex-direction: column;
+  color: #fff;
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6);
+  text-align:center;
+  margin: 0;
+}
+
+#heroLine {
+  height: 2px;
+  background-color: #fff;
+  width: 500px;
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 499px) {
+  #heroLine {
+    width: 355px;
+  }
+}
+
+#titleText {
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: .2em;
+}
+
+#myName {
+  color: #a7c2e4;
+}
+
+#heroTextSmall h5 {
+  margin: .25em;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+/* -- Main Content CSS -- */
+.mainContent {
+  margin: 5vw;
+}
+
+.contentHeader {
+
+}
+
+/* -- aboutMe -- */
