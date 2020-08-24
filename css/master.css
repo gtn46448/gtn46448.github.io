@@ -42,6 +42,7 @@ nav {
   height: 100%;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 }
 
 .navLinks a {
@@ -60,9 +61,27 @@ nav {
   color: #92b4dd;
 }
 
+.navLinks a:active {
+  background: #1b1f22;
+}
+
 .burger {
   display: none;
-  margin: 0 2em 0 0;
+  margin: 0 .5em 0 0;
+  padding: 5px;
+  z-index: 1;
+}
+
+.burger:hover {
+  background: #242a2e;
+}
+
+.burger:hover div, .burger.hover div {
+    background-color: #92b4dd;
+}
+
+.burger:active {
+  background: #1b1f22;
 }
 
 .burger div {
@@ -70,24 +89,64 @@ nav {
   height: 2px;
   background-color: #fff;
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
   .navLinks{
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 220px;
     top: 55px;
     flex-direction: column;
-    background-color: #2D3639;
-    margin: 0;
+    background-color: #364145;
+    margin: .2em .5em 0 0;
+    width: 150px;
+    display: none;
   }
   .navLinks li {
     width: 100%;
+    height: 55px;
+    opacity: 0;
   }
   .navLinks a{
     width: 100%;
+    justify-content: flex-start;
   }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.navActive{
+  display: flex;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* .toggle .line1 {
+  transform: rotate(225deg) translate(-5px, -5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(315deg) translate(5px, -5px);
+} */
+
+.toggle {
+  background-color: #242a2e;
 }
 
 /* -- Hero Image CSS -- */
@@ -111,7 +170,7 @@ nav {
 
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.8);
   text-align:center;
   margin: 0;
 }
@@ -119,30 +178,49 @@ nav {
 #heroLine {
   height: 2px;
   background-color: #fff;
-  width: 500px;
+  width: 37em;
   margin-bottom: 4px;
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 34.4em) {
+  #intro{
+    display: none;
+  }
   #heroLine {
-    width: 355px;
+    width: 26em;
   }
 }
 
 #titleText {
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 3em;
   margin: .2em;
 }
 
 #myName {
-  color: #a7c2e4;
+  color: #92b4dd;
 }
 
 #heroTextSmall h5 {
   margin: .25em;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: normal;
+}
+
+@media screen and (max-width: 400px) {
+  #titleText {
+    font-size: 2em;
+    margin: .13em;
+  }
+
+  #heroLine {
+    width: 16.5em;
+  }
+
+  #heroTextSmall {
+    margin: 0;
+    font-size: .75em;
+  }
 }
 
 /* -- Main Content CSS -- */
