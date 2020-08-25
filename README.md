@@ -1,2 +1,2 @@
 # GN Personal Website
- First iteration of a personal website
+ First iteration of a personal website WIP
