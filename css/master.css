@@ -153,20 +153,12 @@ nav {
 
 .heroImage {
   height: 100vh;
-  background-image: url(../resources/HeroImage.png);
+  background-image: url(../resources/HeroImageLarge.png);
   background-position: center;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.heroImageFull{
-  height: 100%;
-  width: 100%;
-  background-image: url(../resources/heroImageLarge.png);
-  background-position: center;
-  background-size: cover;
 }
 
 .heroTextBox {
