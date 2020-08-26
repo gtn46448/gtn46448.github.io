@@ -54,11 +54,15 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 0 1.5em;
+  border: 2px solid transparent;
+  box-sizing: border-box;
 }
 
 .navLinks a:hover {
   background: #242a2e;
   color: #92b4dd;
+  transition: color .5s ease;
+  border-bottom: #92b4dd 2px solid;
 }
 
 .navLinks a:active {
@@ -117,6 +121,14 @@ nav {
   .burger {
     display: block;
     cursor: pointer;
+  }
+
+  .navLinks a:hover {
+    background: #242a2e;
+    color: #92b4dd;
+    transition: color .5s ease, background .5s ease;
+    border-left: #92b4dd 2px solid;
+    border-bottom: 2px solid transparent;
   }
 }
 
@@ -237,7 +249,7 @@ nav {
 
 /* -- About Me CSS -- */
 .aboutMe {
-  background-color: #
+  margin: 7vw;
 }
 
 .contentHeader{
@@ -250,8 +262,8 @@ nav {
 }
 
 .profilePic {
-  width: 15em;
-  height: 15em;
+  width: 14em;
+  height: 14em;
   border-radius: 50%;
 
   background-image: url(../resources/profile.jpg);
