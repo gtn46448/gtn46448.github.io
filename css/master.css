@@ -153,9 +153,7 @@ nav {
 
 .heroImage {
   height: 100vh;
-  background-image: url(../resources/HeroImageLarge.png);
-  background-position: center;
-  background-size: cover;
+  background-color: #0e1324;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,9 +166,12 @@ nav {
   flex-direction: column;
   color: #fff;
 
+  background-image: url(../resources/HeroImage.svg);
+  background-position: center;
+  background-size: cover;
+
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.8);
   text-align:center;
   margin: 0;
 }
@@ -225,7 +226,7 @@ nav {
 
 /* -- Main Content CSS -- */
 .mainContent {
-  margin: 5vw;
+  /* margin: 5vw; */
 }
 
 .contentHeader {
@@ -234,4 +235,26 @@ nav {
   font-size: 1.7em;
 }
 
-/* -- aboutMe -- */
+/* -- About Me CSS -- */
+.aboutMe {
+  background-color: #
+}
+
+.contentHeader{
+  margin: 0;
+}
+
+.aboutMeContent {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.profilePic {
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+
+  background-image: url(../resources/profile.jpg);
+  background-position: center;
+  background-size: cover;
+}
