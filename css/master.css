@@ -1,6 +1,7 @@
 /* -- Body CSS -- */
 body {
-  font-family: 'PT-Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,6 +20,7 @@ nav {
   width: 100%;
   top: 0;
   font-family: 'Poppins', sans-serif;
+  z-index: 4;
 }
 
 .logo {
@@ -73,7 +75,7 @@ nav {
   display: none;
   margin: 0 .5em 0 0;
   padding: 5px;
-  z-index: 1;
+  z-index: 5;
 }
 
 .burger:hover {
@@ -217,7 +219,7 @@ nav {
 #heroTextSmall h5 {
   margin: .25em;
   font-size: 1.6em;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 400px) {
@@ -227,46 +229,96 @@ nav {
   }
 
   #heroLine {
-    width: 16.5em;
+    width: 17.2em;
   }
 
   #heroTextSmall {
     margin: 0;
-    font-size: .75em;
+    font-size: .7em;
   }
 }
 
 /* -- Main Content CSS -- */
 .mainContent {
   /* margin: 5vw; */
+  font-size: 19px;
 }
 
-.contentHeader {
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal;
-  font-size: 1.7em;
+.container {
+  margin: 3vw;
 }
 
 /* -- About Me CSS -- */
 .aboutMe {
-  margin: 7vw;
-}
-
-.contentHeader{
-  margin: 0;
+  justify-content: center;
+  padding: 3vw;
+  padding-top: 3vw;
+  margin-top: 2em;
 }
 
 .aboutMeContent {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: center;
 }
 
 .profilePic {
-  width: 14em;
-  height: 14em;
-  border-radius: 50%;
+  width: 20em;
+  height: 30em;
+  filter: grayscale(100%);
 
-  background-image: url(../resources/profile.jpg);
+  background-image: url(../resources/profile2.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.column1 {
+  justify-content: center;
+  display: flex;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.column2 p {
+  margin-top: 0;
+  line-height: 1.4em;
+  background: #fff;
+}
+
+.aboutHeader {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 3em;
+  color: #fff;
+  width: 5.7em;
+  margin: .5em 0 .7em 0;
+  display: flex;
+  justify-content: center;
+  background-color: #2D3639;
+  position: relative;
+  right: 2em;
+}
+
+.aboutWords {
+
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMeContent{
+    flex-direction: column;
+  }
+
+  .profilePic{
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+  }
+
+  .aboutHeader {
+    right: 0;
+    font-size: 2.5em;
+  }
 }
