@@ -7,17 +7,21 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  color: #2C578C;
+}
+
 /* -- Navbar CSS -- */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 55px;
+  width: 100%;
   padding: 0;
   background-color: #2D3639;
   color: #fff;
   position: fixed;
-  width: 100%;
   top: 0;
   font-family: 'Poppins', sans-serif;
   z-index: 4;
@@ -29,41 +33,55 @@ nav {
 
 }
 
+.navButtons {
+  display: flex;
+  height: 55px;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 .4em 0 0;
+}
+
 .navLinks {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0;
-  margin: 0 2em 0 0;
-  height: 100%;
 }
 
 .navLinks li{
   list-style: none;
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
   opacity: 0;
+  margin-left: .2em;
 }
 
 .navLinks a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  height: 100%;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.5em;
+  padding: 0 1em;
   border: 2px solid transparent;
   box-sizing: border-box;
 }
 
+/* .navLinks a p{
+  display: none;
+}
+
+.navLinks a:hover p, .navLinks a.hover p{
+  display: block;
+} */
+
 .navLinks a:hover {
   background: #242a2e;
   color: #92b4dd;
-  transition: color .5s ease;
+  transition: color .5s ease, background-color 1s ease;
   border-bottom: #92b4dd 2px solid;
 }
 
@@ -71,9 +89,56 @@ nav {
   background: #1b1f22;
 }
 
+.resumeButtonContainer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.verticalLine {
+  height: 43px;
+  width: 1px;
+  background-color: #3F4B50;
+  margin: 0 .6em 0 .4em;
+}
+
+.resumeButton {
+  margin: 0 .7em;
+  padding: .05em .2em;
+  border-radius: 6%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.resumeButton a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.resumeButton:hover{
+  background-color: #242a2e;
+  border-color: #92b4dd;
+  transition: background-color .5s ease;
+}
+
+.resumeButton:hover a, .resumeButton.hover a {
+    color: #92b4dd;
+    transition: color .5s ease;
+}
+
+.resumeButton:active{
+  background-color: #1b1f22;
+}
+
 .burger {
   display: none;
-  margin: 0 .5em 0 0;
+  margin: 0 .5em 0 .1em;
   padding: 5px;
   z-index: 5;
 }
@@ -99,25 +164,33 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  .navButtons{
+    margin:0;
+  }
+
   .navLinks{
     position: absolute;
     right: 0px;
-    height: 220px;
-    top: 55px;
+    height: 180px;
+    top: 60px;
     flex-direction: column;
     background-color: #364145;
     margin: .2em .5em 0 0;
-    width: 150px;
+    width: 146px;
     display: none;
   }
   .navLinks li {
     width: 100%;
-    height: 55px;
     opacity: 0;
   }
   .navLinks a{
     width: 100%;
+    height: 45px;
     justify-content: flex-start;
+  }
+
+  .resumeButtonContainer {
+    flex-direction: row-reverse;
   }
 
   .burger {
@@ -165,12 +238,22 @@ nav {
 
 /* -- Hero Image CSS -- */
 
-.heroImage {
+.heroBackground {
   height: 100vh;
   background-color: #0e1324;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.heroImage {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  background-image: url(../resources/HeroImage.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 .heroTextBox {
@@ -180,17 +263,13 @@ nav {
   flex-direction: column;
   color: #fff;
 
-  background-image: url(../resources/HeroImage.svg);
-  background-position: center;
-  background-size: cover;
-
   align-items: center;
   justify-content: center;
   text-align:center;
   margin: 0;
 }
 
-#heroLine {
+.heroLine {
   height: 2px;
   background-color: #fff;
   width: 37em;
@@ -198,41 +277,41 @@ nav {
 }
 
 @media screen and (max-width: 35.4em) {
-  #intro{
+  .intro{
     display: none;
   }
-  #heroLine {
+  .heroLine {
     width: 26em;
   }
 }
 
-#titleText {
+.titleText {
   font-weight: 700;
   font-size: 3em;
   margin: .2em;
 }
 
-#myName {
-  color: #92b4dd;
+.myName {
+  color: #a2bfe2;
 }
 
-#heroTextSmall h5 {
+.heroTextSmall h5 {
   margin: .25em;
   font-size: 1.6em;
   font-weight: 400;
 }
 
 @media screen and (max-width: 400px) {
-  #titleText {
+  .titleText {
     font-size: 2em;
     margin: .13em;
   }
 
-  #heroLine {
+  .heroLine {
     width: 17.2em;
   }
 
-  #heroTextSmall {
+  .heroTextSmall {
     margin: 0;
     font-size: .7em;
   }
@@ -242,18 +321,19 @@ nav {
 .mainContent {
   /* margin: 5vw; */
   font-size: 19px;
+  background: repeat url(../resources/noise.png) 0 0;
 }
 
 .container {
-  margin: 3vw;
+  padding: 2em;
 }
 
 /* -- About Me CSS -- */
 .aboutMe {
+  display: flex;
   justify-content: center;
-  padding: 3vw;
-  padding-top: 3vw;
-  margin-top: 2em;
+  padding: 3em;
+  padding-top: 5em;
 }
 
 .aboutMeContent {
@@ -272,20 +352,9 @@ nav {
 }
 
 .column1 {
-  justify-content: center;
-  display: flex;
-}
-
-.column2 {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-}
-
-.column2 p {
-  margin-top: 0;
-  line-height: 1.4em;
-  background: #fff;
 }
 
 .aboutHeader {
@@ -294,31 +363,109 @@ nav {
   font-size: 3em;
   color: #fff;
   width: 5.7em;
-  margin: .5em 0 .7em 0;
+  height: 1.5em;
   display: flex;
   justify-content: center;
-  background-color: #2D3639;
+  background-color: #364145;
   position: relative;
-  right: 2em;
+  left: 5em;
+  bottom: 9.3em;
+}
+
+.column1 .horizontalLine{
+  border-top: 2px solid #000;
+  padding-top: .2em;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.column1 .horizontalLine::before, .column1 .horizontalLine::after {
+  content: "";
+  display: block;
+  background-color: #000;
+  height: .3em;
+  width: .4em;
+  position: relative;
+}
+
+.column1 .horizontalLine::before{
+  left: 0;
+  bottom: .49em;
+  transform-origin: left bottom;
+  transform: rotate(20deg);
+}
+.column1 .horizontalLine::after{
+
+  left: 97.52%;
+  bottom: .65em;
+  transform-origin: left bottom;
+  transform: rotate(-20deg);
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.headerSpacer{
+  height: 9em;
+}
+
+.column2 p {
+  margin-top: 0;
+  line-height: 1.3em;
 }
 
 .aboutWords {
-
+  max-width: 40em;
+  min-width: 16em;
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 1em;
+  }
+
   .aboutMeContent{
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .profilePic{
-    height: 15em;
-    width: 15em;
+    height: 13em;
+    width: 13em;
     border-radius: 50%;
   }
 
+  .column2 {
+    padding-top: 0;
+  }
+
   .aboutHeader {
-    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: .2em;
     font-size: 2.5em;
+    background-color: transparent;
+    color: #000;
+    width: 100%;
+  }
+
+  .aboutWords {
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .column1 .horizontalLine {
+    display: block;
+    position: relative;
+  }
+
+  .headerSpacer{
+    height: 0px;
   }
 }
