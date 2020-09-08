@@ -29,7 +29,7 @@ nav {
 
 .logo {
   font-size: 20px;
-  margin-left: 2em;
+  margin-left: 2rem;
 
 }
 
@@ -38,7 +38,7 @@ nav {
   height: 55px;
   align-items: center;
   justify-content: flex-end;
-  margin: 0 .4em 0 0;
+  margin: 0 .3rem 0 0;
 }
 
 .navLinks {
@@ -54,7 +54,7 @@ nav {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  margin-left: .2em;
+  margin-left: .1rem;
 }
 
 .navLinks a {
@@ -65,7 +65,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1em;
+  padding: 0 .7rem;
   border: 2px solid transparent;
   box-sizing: border-box;
 }
@@ -99,12 +99,12 @@ nav {
   height: 43px;
   width: 1px;
   background-color: #3F4B50;
-  margin: 0 .6em 0 .4em;
+  margin: 0 .5rem 0 .4rem;
 }
 
 .resumeButton {
-  margin: 0 .7em;
-  padding: .05em .2em;
+  margin: 0 .7rem;
+  padding: .05rem .2rem;
   border-radius: 6%;
   border: 1px solid #fff;
   cursor: pointer;
@@ -129,7 +129,7 @@ nav {
 
 .resumeButton:hover a, .resumeButton.hover a {
     color: #92b4dd;
-    transition: color .5s ease;
+    /* transition: color .5s ease; */
 }
 
 .resumeButton:active{
@@ -138,7 +138,7 @@ nav {
 
 .burger {
   display: none;
-  margin: 0 .5em 0 .1em;
+  margin: 0 .5em 0 .1rem;
   padding: 5px;
   z-index: 5;
 }
@@ -182,6 +182,7 @@ nav {
   .navLinks li {
     width: 100%;
     opacity: 0;
+    margin: 0;
   }
   .navLinks a{
     width: 100%;
@@ -272,7 +273,7 @@ nav {
 .heroLine {
   height: 2px;
   background-color: #fff;
-  width: 37em;
+  width: 37rem;
   margin-bottom: 4px;
 }
 
@@ -281,14 +282,14 @@ nav {
     display: none;
   }
   .heroLine {
-    width: 26em;
+    width: 26rem;
   }
 }
 
 .titleText {
   font-weight: 700;
-  font-size: 3em;
-  margin: .2em;
+  font-size: 3rem;
+  margin: .2rem;
 }
 
 .myName {
@@ -296,24 +297,24 @@ nav {
 }
 
 .heroTextSmall h5 {
-  margin: .25em;
-  font-size: 1.6em;
+  margin: .25rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
 @media screen and (max-width: 400px) {
   .titleText {
-    font-size: 2em;
-    margin: .13em;
+    font-size: 2rem;
+    margin: .13rem;
   }
 
   .heroLine {
-    width: 17.2em;
+    width: 17.2rem;
   }
 
   .heroTextSmall {
     margin: 0;
-    font-size: .7em;
+    font-size: .7rem;
   }
 }
 
@@ -325,15 +326,15 @@ nav {
 }
 
 .container {
-  padding: 2em;
+  padding: 1rem 2rem;
 }
 
 /* -- About Me CSS -- */
 .aboutMe {
   display: flex;
   justify-content: center;
-  padding: 3em;
-  padding-top: 5em;
+  padding: 3rem;
+  padding-top: 5rem;
 }
 
 .aboutMeContent {
@@ -342,8 +343,8 @@ nav {
 }
 
 .profilePic {
-  width: 20em;
-  height: 30em;
+  width: 20rem;
+  height: 30rem;
   filter: grayscale(100%);
 
   background-image: url(../resources/profile2.jpg);
@@ -360,21 +361,25 @@ nav {
 .aboutHeader {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 3em;
+  font-size: 3rem;
   color: #fff;
-  width: 5.7em;
-  height: 1.5em;
+  width: 18rem;
+  height: 4.5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #364145;
   position: relative;
-  left: 5em;
-  bottom: 9.3em;
+  left: 14.5rem;
+  bottom: 28rem;
 }
 
-.column1 .horizontalLine{
+.column1 .horizontalLine {
   border-top: 2px solid #000;
-  padding-top: .2em;
+}
+
+.horizontalLine{
+  padding-top: .2rem;
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -382,25 +387,27 @@ nav {
 }
 
 .column1 .horizontalLine::before, .column1 .horizontalLine::after {
+  background-color: #000;
+}
+
+.horizontalLine::before, .horizontalLine::after {
   content: "";
   display: block;
-  background-color: #000;
-  height: .3em;
-  width: .4em;
+  height: .3rem;
+  width: .4rem;
   position: relative;
 }
 
-.column1 .horizontalLine::before{
+.horizontalLine::before{
   left: 0;
-  bottom: .49em;
+  bottom: .5rem;
   transform-origin: left bottom;
   transform: rotate(20deg);
 }
-.column1 .horizontalLine::after{
-
-  left: 97.52%;
-  bottom: .65em;
-  transform-origin: left bottom;
+.horizontalLine::after{
+  left: 97%;
+  bottom: .8rem;
+  transform-origin: right bottom;
   transform: rotate(-20deg);
 }
 
@@ -411,22 +418,22 @@ nav {
 }
 
 .headerSpacer{
-  height: 9em;
+  height: 9rem;
 }
 
 .column2 p {
   margin-top: 0;
-  line-height: 1.3em;
+  line-height: 1.3rem;
 }
 
 .aboutWords {
-  max-width: 40em;
-  min-width: 16em;
+  max-width: 40rem;
+  min-width: 16rem;
 }
 
 @media screen and (max-width: 768px) {
   .container {
-    padding: 1em;
+    padding: 1rem;
   }
 
   .aboutMeContent{
@@ -436,8 +443,8 @@ nav {
   }
 
   .profilePic{
-    height: 13em;
-    width: 13em;
+    height: 13rem;
+    width: 13rem;
     border-radius: 50%;
   }
 
@@ -448,9 +455,10 @@ nav {
   .aboutHeader {
     left: 0;
     bottom: 0;
-    margin-top: .2em;
-    font-size: 2.5em;
+    margin-top: .2rem;
+    font-size: 2.5rem;
     background-color: transparent;
+    align-items: flex-end;
     color: #000;
     width: 100%;
   }
@@ -467,5 +475,103 @@ nav {
 
   .headerSpacer{
     height: 0px;
+  }
+}
+
+/* -- Skills CSS -- */
+.skills {
+  background-color: #121617;
+  color: #fff;
+}
+
+.skillsContent {
+  padding: 3rem;
+}
+
+.skillsContent>.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skillsHeader {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #fff;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsContent>.container>.horizontalLine{
+  display: block;
+  border-top: 2px solid #fff;
+  width: 12rem;
+}
+
+.skillsContent>.container>.horizontalLine::before, .skillsContent>.container>.horizontalLine::after {
+  background-color: #fff;
+}
+
+.skillsContent>.container>.horizontalLine::after {
+  left: 11.6rem;
+}
+
+.skillsLists{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.development, .design{
+  width: 40%;
+}
+
+.skillsSubheader {
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.barGraph {
+  padding-left: 5%;
+}
+
+.barGraph>li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bar{
+  width: 100%;
+  height: 1rem;
+  background-color: #1b2022;
+  margin: .5rem 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.barFill{
+  background-color: #414f7a;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-left: 1rem;
+  border-radius: 1.5rem;
+}
+
+.barLabelPercent {
+  width: .1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .development, .design{
+    width: 100%;
   }
 }
