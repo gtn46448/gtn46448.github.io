@@ -480,39 +480,48 @@ nav {
 
 /* -- Skills CSS -- */
 .skills {
-  background-color: #121617;
+  background-color: #090A0B;
+  opacity: 90%;
   color: #fff;
 }
 
 .skillsContent {
   padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.skillsContent>.container {
+.skillsWords {
+  width: 45%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
+  padding-right: 0;
 }
 
 .skillsHeader {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 3rem;
+  letter-spacing: .05em;
   color: #fff;
-  height: 3.5rem;
+  /* background-color: #364145; */
+  width: 18rem;
+  height: 4.5rem;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
-.skillsContent>.container>.horizontalLine{
+.skillsWords>.horizontalLine{
   display: block;
-  border-top: 2px solid #fff;
-  width: 12rem;
+  border-top: 2px solid #364145;
+  width: 5rem;
 }
 
 .skillsContent>.container>.horizontalLine::before, .skillsContent>.container>.horizontalLine::after {
-  background-color: #fff;
+  background-color: #364145;
 }
 
 .skillsContent>.container>.horizontalLine::after {
@@ -520,16 +529,14 @@ nav {
 }
 
 .skillsLists{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
+  width: 42%;
   margin-top: 2rem;
+  padding-left: 0;
 }
 
-.development, .design{
-  width: 40%;
-}
+/* .development, .design{
+  width: 100%;
+} */
 
 .skillsSubheader {
   font-weight: 400;
@@ -545,6 +552,8 @@ nav {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin-bottom: .25rem;
 }
 
 .bar{
@@ -567,11 +576,12 @@ nav {
 }
 
 .barLabelPercent {
-  width: .1rem;
+  width: 0;
+  /* display: none; */
 }
 
 @media screen and (max-width: 768px) {
-  .development, .design{
+  .skillsWords, .skillsLists{
     width: 100%;
   }
 }
