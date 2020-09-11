@@ -30,7 +30,6 @@ nav {
 .logo {
   font-size: 20px;
   margin-left: 2rem;
-
 }
 
 .navButtons {
@@ -87,6 +86,7 @@ nav {
 
 .navLinks a:active {
   background: #1b1f22;
+  transition: none;
 }
 
 .resumeButtonContainer {
@@ -105,7 +105,7 @@ nav {
 .resumeButton {
   margin: 0 .7rem;
   padding: .05rem .2rem;
-  border-radius: 6%;
+  border-radius: 3px;
   border: 1px solid #fff;
   cursor: pointer;
 }
@@ -134,6 +134,7 @@ nav {
 
 .resumeButton:active{
   background-color: #1b1f22;
+  transition: none;
 }
 
 .burger {
@@ -329,17 +330,15 @@ nav {
   padding: 1rem 2rem;
 }
 
-/* -- About Me CSS -- */
-.aboutMe {
-  display: flex;
-  justify-content: center;
+section {
   padding: 3rem;
-  padding-top: 5rem;
+  display: flex;
 }
 
-.aboutMeContent {
-  display: flex;
+/* -- About Me CSS -- */
+#aboutMe {
   justify-content: center;
+  padding-top: 5rem;
 }
 
 .profilePic {
@@ -479,15 +478,9 @@ nav {
 }
 
 /* -- Skills CSS -- */
-.skills {
-  background-color: #090A0B;
-  opacity: 90%;
+#skills {
+  background-color: #121416;
   color: #fff;
-}
-
-.skillsContent {
-  padding: 3rem;
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -516,16 +509,13 @@ nav {
 
 .skillsWords>.horizontalLine{
   display: block;
-  border-top: 2px solid #364145;
+  border-top: 2px solid #3b74ba;
   width: 5rem;
+  margin-left: .2rem;
 }
 
-.skillsContent>.container>.horizontalLine::before, .skillsContent>.container>.horizontalLine::after {
-  background-color: #364145;
-}
-
-.skillsContent>.container>.horizontalLine::after {
-  left: 11.6rem;
+.skillsWords>.horizontalLine::before {
+  background-color: #3b74ba;
 }
 
 .skillsLists{
@@ -585,3 +575,112 @@ nav {
     width: 100%;
   }
 }
+
+/* -- Works CSS --*/
+#works{
+  flex-direction: column;
+}
+
+.worksHeader {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #090A0B;
+}
+
+.worksTitle>.horizontalLine{
+  display: block;
+  border-top: 2px solid #3b74ba;
+  width: 5rem;
+  margin-left: .2rem;
+}
+
+.worksTitle>.horizontalLine::before {
+  background-color: #3b74ba;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-row-gap: 4rem;
+  grid-column-gap: 3rem;
+}
+
+.cardSpacer {
+  display: flex;
+  justify-content: center;
+}
+
+.workCard {
+  background-color: #090A0B;
+  height: 22rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: .2rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.workCard:hover{
+  height: 22.5rem;
+  width: 15.3rem;
+  box-shadow: 5px 5px 6px black;
+}
+
+.workCard:active{
+  height: 22.3rem;
+  width: 15.15rem;
+}
+
+.cardImageBox{
+  height: 50%;
+  width: 100%;
+}
+
+.cardImageBox::after{
+  content: "";
+  display: block;
+  position: relative;
+  bottom: 40%;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(180deg,rgba(207,198,191,0) 10%,#090A0B 90%);
+}
+
+.cardPreviewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardInfo {
+  color: #fff;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectName {
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+}
+
+.cardDescription {
+  font-size: 1.1rem;
+}
+
+/* .cardOverlay {
+  background-color: rgba(0, 0, 0, .9);
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+} */
