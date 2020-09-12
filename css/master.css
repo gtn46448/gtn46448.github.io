@@ -7,6 +7,10 @@ body {
   box-sizing: border-box;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 a {
   color: #2C578C;
 }
@@ -240,10 +244,10 @@ nav {
 
 /* -- Hero Image CSS -- */
 
-.heroBackground {
+.hero {
   height: 100vh;
   background-color: #0e1324;
-  display: flex;
+  padding: 0;
   justify-content: center;
   align-items: center;
 }
@@ -375,6 +379,7 @@ section {
 
 .column1 .horizontalLine {
   border-top: 2px solid #000;
+  display: none;
 }
 
 .horizontalLine{
@@ -382,7 +387,7 @@ section {
   width: 100%;
   height: 0;
   overflow: hidden;
-  display: none;
+  display: block;
 }
 
 .column1 .horizontalLine::before, .column1 .horizontalLine::after {
@@ -435,7 +440,7 @@ section {
     padding: 1rem;
   }
 
-  .aboutMeContent{
+  #aboutMe{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -603,12 +608,13 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   grid-row-gap: 4rem;
-  grid-column-gap: 3rem;
+  grid-column-gap: 2rem;
 }
 
 .cardSpacer {
   display: flex;
   justify-content: center;
+  height: 23rem;
 }
 
 .workCard {
@@ -665,7 +671,7 @@ section {
   align-items: center;
 }
 
-.projectName {
+.cardTitle {
   margin-top: 1rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
@@ -675,12 +681,65 @@ section {
   font-size: 1.1rem;
 }
 
-/* .cardOverlay {
+.cardOverlay {
   background-color: rgba(0, 0, 0, .9);
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
-} */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease-out;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cardFullBox {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.spacer {
+  pointer-events: none;
+}
+
+.cardFull {
+  margin: 5rem 0;
+  background-color: #fff;
+  width: 600px;
+  border-radius: 5px;
+}
+
+.cardFullImage {
+  width: 100%;
+  height: 370px;
+  border-radius: 5px 5px 0 0;
+}
+
+.cardFullTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.cardFullInfo>.horizontalLine {
+  border-top: 2px solid #3b74ba;
+  width: 5.5rem;
+}
+
+.cardFullInfo>.horizontalLine::before {
+  background-color: #3b74ba;
+}
+
+.cardFullDescription {
+  margin-top: 1rem;
+}
