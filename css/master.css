@@ -7,6 +7,10 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  line-height: 1.5rem;
+}
+
 .noScroll {
   overflow: hidden;
 }
@@ -378,7 +382,7 @@ section {
 }
 
 .column1 .horizontalLine {
-  border-top: 2px solid #121416;
+  border-top: 2px solid #3b74ba;
   display: none;
 }
 
@@ -391,7 +395,7 @@ section {
 }
 
 .column1 .horizontalLine::before, .column1 .horizontalLine::after {
-  background-color: #121416;
+  background-color: #3b74ba;
 }
 
 .horizontalLine::before, .horizontalLine::after {
@@ -427,7 +431,6 @@ section {
 
 .column2 p {
   margin-top: 0;
-  line-height: 1.3rem;
 }
 
 .aboutWords {
@@ -525,54 +528,31 @@ section {
 
 .skillsLists{
   width: 42%;
-  margin-top: 2rem;
+  /* margin-top: 1rem; */
   padding-left: 0;
 }
 
-/* .development, .design{
-  width: 100%;
-} */
+.development, .design{
+  margin-top: 2.5rem;
+}
 
 .skillsSubheader {
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
-  margin-bottom: 1.5rem;
 }
 
 .barGraph {
   padding-left: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  grid-gap: .5rem;
 }
 
 .barGraph>li{
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    margin-bottom: .25rem;
-}
-
-.bar{
-  width: 100%;
-  height: .5rem;
-  background-color: #1b2022;
-  margin: .5rem 0;
-  border-radius: 1.5rem;
-  overflow: hidden;
-}
-
-.barFill{
-  background-color: #414f7a;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: white;
-  padding-left: 1rem;
-  border-radius: 1.5rem;
-}
-
-.barLabelPercent {
-  width: 0;
-  /* display: none; */
+    padding: .5rem 1rem;
+    border: 2px solid #364145;
 }
 
 @media screen and (max-width: 768px) {
