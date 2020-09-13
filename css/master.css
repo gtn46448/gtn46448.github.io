@@ -378,7 +378,7 @@ section {
 }
 
 .column1 .horizontalLine {
-  border-top: 2px solid #000;
+  border-top: 2px solid #121416;
   display: none;
 }
 
@@ -391,7 +391,7 @@ section {
 }
 
 .column1 .horizontalLine::before, .column1 .horizontalLine::after {
-  background-color: #000;
+  background-color: #121416;
 }
 
 .horizontalLine::before, .horizontalLine::after {
@@ -460,10 +460,10 @@ section {
     left: 0;
     bottom: 0;
     margin-top: .2rem;
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     background-color: transparent;
     align-items: flex-end;
-    color: #000;
+    color: #121416;
     width: 100%;
   }
 
@@ -553,7 +553,7 @@ section {
 
 .bar{
   width: 100%;
-  height: 1rem;
+  height: .5rem;
   background-color: #1b2022;
   margin: .5rem 0;
   border-radius: 1.5rem;
@@ -605,9 +605,10 @@ section {
 }
 
 .gallery {
+  margin-top: .5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-row-gap: 4rem;
+  grid-row-gap: 3rem;
   grid-column-gap: 2rem;
 }
 
@@ -618,27 +619,23 @@ section {
 }
 
 .workCard {
-  background-color: #090A0B;
-  height: 22rem;
+  background-color: #121416;
+  height: 21.5rem;
   width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: .2rem;
+  /* border-radius: .2rem; */
   overflow: hidden;
   cursor: pointer;
   transition: all 0.1s ease;
 }
 
 .workCard:hover{
-  height: 22.5rem;
+  /* height: 22.5rem;
   width: 15.3rem;
-  box-shadow: 5px 5px 6px black;
-}
-
-.workCard:active{
-  height: 22.3rem;
-  width: 15.15rem;
+  box-shadow: 5px 5px 6px #242a2e; */
+  transform: translateY(-.5rem);
 }
 
 .cardImageBox{
@@ -653,7 +650,7 @@ section {
   bottom: 40%;
   width: 100%;
   height: 40%;
-  background: linear-gradient(180deg,rgba(207,198,191,0) 10%,#090A0B 90%);
+  background: linear-gradient(180deg,rgba(207,198,191,0) 10%,#121416 90%);
 }
 
 .cardPreviewImage {
@@ -716,13 +713,13 @@ section {
   margin: 5rem 0;
   background-color: #fff;
   width: 600px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .cardFullImage {
   width: 100%;
   height: 370px;
-  border-radius: 5px 5px 0 0;
+  /* border-radius: 5px 5px 0 0; */
 }
 
 .cardFullTitle {
@@ -742,4 +739,9 @@ section {
 
 .cardFullDescription {
   margin-top: 1rem;
+}
+
+/* -- Contact CSS -- */
+#contact {
+  background-color: #121416;
 }

@@ -18,7 +18,7 @@ const linkAnimation = () => {
   });
 }
 
-const overlayManage = () => {
+const overlayCreate = () => {
   const cardOverlay = document.querySelector('.cardOverlay');
   const workCards = document.querySelectorAll('.workCard');
   const body = document.body;
@@ -26,11 +26,15 @@ const overlayManage = () => {
 
   workCards.forEach((workCard) => {
     workCard.addEventListener("click", () => {
+      //cardFullBox is the one that scrolls rather than cardOverlay
+      document.querySelector('.cardFullBox').scrollTop = 0;
       cardOverlay.classList.add("open");
       // measure width before vert scrollbar removed
       const w1 = document.body.clientWidth;
       //inadvertantly removes scrollbar from body (but adds it to overlay)
       body.classList.add("noScroll");
+      //temp padding
+      body.style.padding = `0px 16px 0px 0px`;
       //measure width after sb removal
       const w2 = document.body.clientWidth;
       //add padding to avoid reflow
@@ -38,8 +42,6 @@ const overlayManage = () => {
       navButtons.style.padding =  `0px ${w2-w1}px 0px 0px`;
 
       cardOverlay.setAttribute('aria-hidden', false);
-      //cardFullBox is the one that scrolls rather than cardOverlay
-      document.querySelector('.cardFullBox').scrollTop = 0;
 
       const fullImage = document.querySelector('.cardFullImage');
       const cardImage = workCard.querySelector('.cardPreviewImage');
@@ -72,7 +74,7 @@ const overlayManage = () => {
 const main = () => {
   navSlide();
   linkAnimation();
-  overlayManage();
+  overlayCreate();
 }
 
 main();
