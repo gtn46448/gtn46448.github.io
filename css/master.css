@@ -541,15 +541,14 @@ section {
   font-family: 'Poppins', sans-serif;
 }
 
-.barGraph {
+.skillsBox {
   padding-left: 5%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
   grid-gap: .5rem;
 }
 
-.barGraph>li{
-    list-style: none;
+.skillItem{
     display: flex;
     padding: .5rem 1rem;
     border: 2px solid #364145;
