@@ -7,6 +7,14 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
 p {
   line-height: 1.5rem;
 }
@@ -286,17 +294,17 @@ nav {
   margin-bottom: 4px;
 }
 
-@media screen and (max-width: 35.4em) {
+@media screen and (max-width: 37.5rem) {
   .intro{
     display: none;
   }
   .heroLine {
-    width: 26rem;
+    width: 27rem;
   }
 }
 
 .titleText {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 3rem;
   margin: .2rem;
 }
@@ -341,11 +349,17 @@ nav {
 section {
   padding: 3rem;
   display: flex;
+  justify-content: center;
+}
+
+.sectionBox {
+  display: flex;
+  justify-content: center;
+  max-width: 70rem;
 }
 
 /* -- About Me CSS -- */
 #aboutMe {
-  justify-content: center;
   padding-top: 5rem;
 }
 
@@ -366,9 +380,6 @@ section {
 }
 
 .aboutHeader {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 3rem;
   color: #fff;
   width: 18rem;
   height: 4.5rem;
@@ -381,7 +392,7 @@ section {
   bottom: 28rem;
 }
 
-.column1 .horizontalLine {
+.column1>.horizontalLine {
   border-top: 2px solid #3b74ba;
   display: none;
 }
@@ -394,7 +405,7 @@ section {
   display: block;
 }
 
-.column1 .horizontalLine::before, .column1 .horizontalLine::after {
+.column1>.horizontalLine::before, .column1>.horizontalLine::after {
   background-color: #3b74ba;
 }
 
@@ -406,17 +417,21 @@ section {
   position: relative;
 }
 
-.horizontalLine::before{
+.horizontalLine::before {
   left: 0;
   bottom: .5rem;
   transform-origin: left bottom;
   transform: rotate(20deg);
 }
-.horizontalLine::after{
-  left: 97%;
+
+.horizontalLine::after {
   bottom: .8rem;
   transform-origin: right bottom;
   transform: rotate(-20deg);
+}
+
+.column1>.horizontalLine::after {
+  left: 97%;
 }
 
 .column2 {
@@ -434,7 +449,6 @@ section {
 }
 
 .aboutWords {
-  max-width: 40rem;
   min-width: 16rem;
 }
 
@@ -443,7 +457,7 @@ section {
     padding: 1rem;
   }
 
-  #aboutMe{
+  #aboutMe>.sectionBox{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -475,7 +489,7 @@ section {
     justify-content: flex-start;
   }
 
-  .column1 .horizontalLine {
+  .column1>.horizontalLine {
     display: block;
     position: relative;
   }
@@ -489,6 +503,9 @@ section {
 #skills {
   background-color: #121416;
   color: #fff;
+}
+
+#skills>.sectionBox {
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -502,9 +519,6 @@ section {
 }
 
 .skillsHeader {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 3rem;
   letter-spacing: .05em;
   color: #fff;
   /* background-color: #364145; */
@@ -544,6 +558,7 @@ section {
 .skillsBox {
   padding-left: 5%;
   display: grid;
+  margin-top: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
   grid-gap: .5rem;
 }
@@ -557,18 +572,17 @@ section {
 @media screen and (max-width: 768px) {
   .skillsWords, .skillsLists{
     width: 100%;
+    padding: 1rem;
   }
 }
 
 /* -- Works CSS --*/
-#works{
+#works>.sectionBox{
   flex-direction: column;
+  width: 100%
 }
 
 .worksHeader {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 3rem;
   color: #090A0B;
 }
 
@@ -720,7 +734,104 @@ section {
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .cardFull {
+    width: 350px;
+  }
+  .cardFullImage {
+    height: 200px;
+  }
+}
+
 /* -- Contact CSS -- */
 #contact {
   background-color: #121416;
+  color: #fff;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactContent>.horizontalLine {
+  border-top: 2px solid #3b76ba;
+  width: 14rem;
+}
+
+.contactContent>.horizontalLine::before, .contactContent>.horizontalLine::after {
+  background-color: #3b76ba;
+}
+
+.contactContent>.horizontalLine::after {
+  left: 13.6rem;
+}
+
+.contactNote {
+  margin: 1.1rem 0 2rem 0;
+  width: 26rem;
+  text-align: center;
+}
+
+.contactButton {
+  width: 10rem;
+  height: 3rem;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.sliderBox {
+  width: 24rem;
+  height: 3rem;
+  display: flex;
+  transform: translateX(-14rem);
+  transition: transform .2s ease;
+}
+
+.sliderBox:hover {
+  transform: translateX(0);
+}
+
+.contactButtonText {
+  text-align: center;
+  line-height: 3rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  bottom: 3rem;
+  pointer-events: none;
+}
+
+.contactButtonBlue {
+  width: 10rem;
+  height: 3rem;
+  background-color: #3b76ba;
+}
+
+.contactButtonSlantBox {
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactButtonSlantTop {
+  width: 4rem;
+  box-sizing: border-box;
+  border-top: 1.5rem solid #364145;
+  border-left: 1rem solid transparent;
+  background-color: #3b76ba;
+}
+.contactButtonSlantBot {
+  width: 4rem;
+  box-sizing: border-box;
+  border-bottom: 1.5rem solid #364145;
+  border-left: 1rem solid transparent;
+  background-color: #3b76ba;
+}
+
+.contactButtonGray {
+  background-color: #364145;
+  width: 10rem;
+  height: 3rem;
 }
