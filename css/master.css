@@ -48,9 +48,28 @@ nav {
   z-index: 4;
 }
 
-.logo {
-  font-size: 20px;
+.logoLink {
+  height: 23px;
+  display: flex;
+  color: #fff;
+  text-decoration: none;
   margin-left: 2rem;
+}
+
+.logo {
+  height: 23px;
+  fill: #fff;
+}
+
+.logoName {
+  font-size: 17px;
+  margin-left: .6rem;
+  line-height: 23px;
+}
+
+.logoLink:hover .logo, .logoLink.hover .logo, .logoLink:hover{
+  fill: #92b4dd;
+  color: #92b4dd;
 }
 
 .navButtons {
@@ -230,6 +249,16 @@ nav {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .logoName {
+    display: none;
+  }
+
+  .logoLink, .logo {
+    height: 29px;
+  }
+}
+
 .navActive{
   display: flex;
 }
@@ -364,7 +393,7 @@ section {
 }
 
 /* -- About Me CSS -- */
-#aboutMe {
+#about {
   padding-top: 5rem;
 }
 
@@ -462,7 +491,7 @@ section {
     padding: 1rem;
   }
 
-  #aboutMe>.sectionBox{
+  #about>.sectionBox{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
