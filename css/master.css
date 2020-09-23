@@ -1,4 +1,14 @@
 /* -- Body CSS -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section p {
+  margin: 1rem 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,9 +16,6 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   background-color: #fff;
 }
 
@@ -59,12 +66,19 @@ nav {
 .logo {
   height: 23px;
   fill: #fff;
+  opacity: 0;
 }
 
 .logoName {
+  overflow: hidden;
   font-size: 17px;
   margin-left: .6rem;
   line-height: 23px;
+}
+
+.logoName p {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .logoLink:hover .logo, .logoLink.hover .logo, .logoLink:hover{
@@ -92,7 +106,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  /* opacity: 0; */
   margin-left: .1rem;
 }
 
@@ -213,22 +227,33 @@ nav {
     position: absolute;
     right: 0px;
     height: 180px;
-    top: 60px;
+    top: 55px;
     flex-direction: column;
     background-color: #364145;
     margin: .2em .5em 0 0;
     width: 146px;
     display: none;
+    transition: all .5s ease;
+    pointer-events: none;
   }
   .navLinks li {
+    display: none;
     width: 100%;
     opacity: 0;
     margin: 0;
+  }
+  .navActive li {
+    display: block;
   }
   .navLinks a{
     width: 100%;
     height: 45px;
     justify-content: flex-start;
+  }
+  .navActive {
+    display: flex;
+    pointer-events: all;
+    top: 60px;
   }
 
   .resumeButtonContainer {
@@ -257,10 +282,6 @@ nav {
   .logoLink, .logo {
     height: 29px;
   }
-}
-
-.navActive{
-  display: flex;
 }
 
 @keyframes navLinkFade {
@@ -319,6 +340,10 @@ nav {
   justify-content: center;
   text-align:center;
   margin: 0;
+}
+
+.heroText, .heroTextSmall {
+  overflow: hidden;
 }
 
 .heroLine {
@@ -693,9 +718,9 @@ section {
 
 .cardInfo {
   color: #fff;
-  width: 100%;
   height: 50%;
   display: flex;
+  padding: 0 1rem;
   flex-direction: column;
   align-items: center;
 }
@@ -893,14 +918,15 @@ section {
 
 .contactIcon {
   display: block;
-  padding: .5rem;
+  padding: .25rem;
   margin: .25rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
   /* background-color: #364145; */
 }
 
 .contactIcon svg {
+  height: 100%;
   fill: #fff;
 }
 

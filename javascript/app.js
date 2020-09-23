@@ -1,21 +1,45 @@
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.navLinks');
+
+window.addEventListener("resize", () => {
+  document.querySelectorAll('.navLinks li').forEach((link) => {
+    link.removeAttribute("style");
+  })
+  burger.classList.remove('toggle');
+  nav.classList.remove('navActive')
+})
+
+const pageLoad = () => {
+  const tl = gsap.timeline();
+
+  tl.to(".logoName p", { duration: .7, x: "0", opacity: 1, delay: .3 });
+  tl.to(".logo", { duration: .7, rotation: 720, opacity: 1 }, "-=.7");
+  tl.from(".navLinks li", { duration: .4, opacity: 0, y: "-5", stagger: .1 }, "-=.3");
+  tl.from(".burger", {duration: .1, opacity: 0, y: "-5"}, "-=.2")
+  tl.from(".resumeButton", { duration: .1, opacity: 0, y: "-5"}, "-=.1");
+  tl.from(".verticalLine", { duration: .3, opacity: 0, delay: .1 });
+  tl.from(".heroLine", {duration: .4, width: 0}, "-=.2");
+  tl.from(".titleText", {duration: .4, y: "100%" }, "-=.2");
+  tl.from(".heroTextSmall h5", {duration: .5, y: "-120%"}, "-=.35");
+}
+
 const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.navLinks');
   // Toggle Nav
   burger.addEventListener('click', ()=> {
     nav.classList.toggle('navActive');
     //Burger Animation
-      burger.classList.toggle('toggle');
-  });
-}
+    burger.classList.toggle('toggle');
+    const navLinks = document.querySelectorAll('.navLinks li');
 
-const linkAnimation = () => {
-  const navLinks = document.querySelectorAll('.navLinks li');
-
-  // Show Links
-  navLinks.forEach((link, index) => {
-    link.style.animation = `navLinkFade 0.2s ease forwards ${index / 7 + .1}s`;
+    // Show Links
+    navLinks.forEach((link, index) => {
+      link.style.animation = `navLinkFade 0.2s ease forwards ${index / 9 + .1}s`;
+    });
   });
+  nav.addEventListener('click', ()=> {
+    nav.classList.toggle('navActive');
+    burger.classList.toggle('toggle');
+  })
 }
 
 const overlayCreate = () => {
@@ -72,8 +96,8 @@ const overlayCreate = () => {
 }
 
 const main = () => {
+  pageLoad();
   navSlide();
-  linkAnimation();
   overlayCreate();
 }
 
