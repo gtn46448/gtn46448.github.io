@@ -49,7 +49,7 @@ const pageLoad = () => {
   tlWorks.fromTo(".workCard", { boxShadow: "7px 7px 8px #000" }, { boxShadow: "0px 0px 0px #000", duration: "0.3"}, "<");
   tlWorks.to(".workCard", {clearProps: "all", stagger: "0.3"}, "<.3");
 
-  const tlContact = gsap.timeline({scrollTrigger: { trigger: "#contact", start: "bottom bottom"}, defaults: {ease: "power1.out"}})
+  const tlContact = gsap.timeline({scrollTrigger: { trigger: "#contact", start: "bottom 10%"}, defaults: {ease: "power1.out"}})
 
   tlContact.from(".contactHeader", { duration: ".5", y: "-70%", opacity: "0" });
   tlContact.from(".contactContent .horizontalLine", { duration: ".3", width: "0"});
