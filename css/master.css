@@ -66,7 +66,6 @@ nav {
 .logo {
   height: 23px;
   fill: #fff;
-  opacity: 0;
 }
 
 .logoName {
@@ -76,10 +75,9 @@ nav {
   line-height: 23px;
 }
 
-.logoName p {
-  transform: translateX(-100%);
-  opacity: 0;
-}
+/* .logoName p {
+  opacity: 1;
+} */
 
 .logoLink:hover .logo, .logoLink.hover .logo, .logoLink:hover{
   fill: #92b4dd;
@@ -690,7 +688,7 @@ section {
 .workCard:hover{
   /* height: 22.5rem;
   width: 15.3rem; */
-  transform: scale(1.02);
+  transform: scale(1.03);
   box-shadow: 5px 5px 6px black;
   /* transform: translateY(-.5rem); */
 }
@@ -759,7 +757,7 @@ section {
   overflow-y: scroll;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
+  justify-items: center;
 }
 
 .spacer {
