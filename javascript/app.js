@@ -34,7 +34,7 @@ const pageLoad = () => {
 
   const tlSkills = gsap.timeline({scrollTrigger: { trigger: "#skills", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
-  tlSkills.from(".skillsHeader", { duration: ".5", y: "-70%", opacity: "0", delay: "0.5" });
+  tlSkills.from(".skillsHeader", { duration: ".5", y: "-70%", opacity: "0" });
   tlSkills.from(".skillsWords .horizontalLine", { duration: ".2", width: "0" });
   tlSkills.from(".skillsDescription p", { duration: ".3", y: "35%", opacity: "0", stagger: ".2" }, "-=.1");
   tlSkills.from(".skillsSubheader", { duration: ".3", x: "35%", opacity: "0", stagger: ".1"}, "-=.2");
