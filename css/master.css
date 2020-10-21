@@ -16,7 +16,6 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  background-color: #fff;
 }
 
 h1 {
@@ -45,8 +44,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 55px;
-  width: 100%;
-  padding: 0;
+  width: 100vw;
   background-color: #2D3639;
   color: #fff;
   position: fixed;
@@ -223,7 +221,7 @@ nav {
 
   .navLinks{
     position: absolute;
-    right: 0px;
+    /* right: 0px; */
     height: 180px;
     top: 55px;
     flex-direction: column;
@@ -407,6 +405,7 @@ section {
   padding: 3rem;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .sectionBox {
@@ -559,7 +558,7 @@ section {
 /* -- Skills CSS -- */
 #skills {
   background-color: #121416;
-  color: #fff;
+  color: #ece8e1;
 }
 
 #skills>.sectionBox {
@@ -577,9 +576,6 @@ section {
 
 .skillsHeader {
   letter-spacing: .05em;
-  color: #fff;
-  /* background-color: #364145; */
-  width: 18rem;
   height: 4.5rem;
   display: flex;
   /* justify-content: center; */
@@ -618,10 +614,10 @@ section {
 
 .skillsBox {
   padding-left: 5%;
-  display: grid;
+  /* display: grid; */
   margin-top: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-  grid-gap: .5rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  grid-gap: .5rem; */
 }
 
 .skillItem{
@@ -715,7 +711,7 @@ section {
 }
 
 .cardInfo {
-  color: #fff;
+  color: #ece8e1;
   height: 50%;
   display: flex;
   padding: 0 1rem;
@@ -758,6 +754,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  align-items: center;
 }
 
 .spacer {
@@ -766,7 +763,7 @@ section {
 
 .cardFull {
   margin: 5rem 0;
-  background-color: #fff;
+  background-color: #ece8e1;
   width: 600px;
   /* border-radius: 5px; */
 }
@@ -798,7 +795,7 @@ section {
 
 @media screen and (max-width: 768px) {
   .cardFull {
-    width: 350px;
+    width: 320px;
   }
   .cardFullImage {
     height: 200px;
@@ -808,7 +805,7 @@ section {
 /* -- Contact CSS -- */
 #contact {
   background-color: #121416;
-  color: #fff;
+  color: #ece8e1;
   padding-bottom: 3rem;
 }
 
@@ -832,7 +829,7 @@ section {
 }
 
 .contactNote {
-  margin: 2rem 0 2.5rem 0;
+  margin: 1.8rem 0 2.5rem 0;
   max-width: 26rem;
   text-align: center;
 }
@@ -859,7 +856,7 @@ section {
 .contactButtonText {
   text-align: center;
   line-height: 3rem;
-  color: #fff;
+  color: #ece8e1;
   font-family: 'Poppins', sans-serif;
   position: relative;
   bottom: 3rem;
@@ -903,7 +900,7 @@ section {
 
 .endNav {
   background-color: #121416;
-  color: #fff;
+  color: #ece8e1;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
@@ -925,7 +922,7 @@ section {
 
 .contactIcon svg {
   height: 100%;
-  fill: #fff;
+  fill: #ece8e1;
 }
 
 .contactIcon:hover svg, .contactIcon.hover svg {
