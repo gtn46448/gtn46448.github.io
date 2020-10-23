@@ -33,14 +33,14 @@ const pageLoad = () => {
   tl.from(".titleText", {duration: ".4", y: "100%" }, "-=.2");
   tl.from(".heroTextSmall h5", {duration: ".5", y: "-120%"}, "-=.35");
 
-  const tlAbout = gsap.timeline({scrollTrigger: { trigger: "#about", start: "top 50%"}, defaults: {ease: "power1.out"}});
+  const tlAbout = gsap.timeline({scrollTrigger: { trigger: "#about", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
   tlAbout.from(".profilePic", { duration: ".7", y: "50%", opacity: "0"});
   tlAbout.from(".aboutHeader", { duration: ".5", y: "-50%", opacity: "0" }, "-=.5");
   tlAbout.from(".column1 .horizontalLine", { duration: ".3", width: "0" });
   tlAbout.from(".aboutWords p", { duration: ".3", y: "35%", opacity: "0", stagger: ".2" }, "-=.2");
 
-  const tlSkills = gsap.timeline({scrollTrigger: { trigger: "#skills", start: "top 50%"}, defaults: {ease: "power1.out"}});
+  const tlSkills = gsap.timeline({scrollTrigger: { trigger: "#skills", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
   tlSkills.from(".skillsHeader", { duration: ".5", y: "-70%", opacity: "0" });
   tlSkills.from(".skillsWords .horizontalLine", { duration: ".2", width: "0" });
@@ -48,16 +48,16 @@ const pageLoad = () => {
   tlSkills.from(".skillsSubheader", { duration: ".3", x: "35%", opacity: "0", stagger: ".1"}, "-=.2");
   tlSkills.from(".skillItem", {duration: ".25", y: "100%", opacity: "0", stagger: ".1"});
 
-  const tlWorks = gsap.timeline({scrollTrigger: { trigger: "#works", start: "top 50%"}, defaults: {ease: "power1.out"}});
+  const tlWorks = gsap.timeline({scrollTrigger: { trigger: "#works", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
   tlWorks.from(".worksHeader", { duration: ".5", y: "-70%", opacity: "0"});
   tlWorks.from(".worksTitle .horizontalLine", { duration: ".2", width: "0" });
   tlWorks.from(".workCard", { y: "50%", opacity: "0", duration: "0.3", stagger: "0.2" });
   tlWorks.from(".workCard", { scale: "1.05", duration: "0.3", stagger: "0.2"}, "<.5");
-  tlWorks.fromTo(".workCard", { boxShadow: "6px 6px 7px #000" }, { boxShadow: "1px 1px 2px #000", duration: "0.3", stagger: "0.2"}, "<");
+  tlWorks.fromTo(".workCard", { boxShadow: "6px 6px 7px #000" }, { boxShadow: "2px 2px 3px #000", duration: "0.3", stagger: "0.2"}, "<");
   tlWorks.to(".workCard", {clearProps: "all", stagger: "0.3"}, "<.3");
 
-  const tlContact = gsap.timeline({scrollTrigger: { trigger: "#contact", start: "bottom bottom"}, defaults: {ease: "power1.out"}})
+  const tlContact = gsap.timeline({scrollTrigger: { trigger: "#contact", start: "50% bottom"}, defaults: {ease: "power1.out"}})
 
   tlContact.from(".contactHeader", { duration: ".5", y: "-70%", opacity: "0" });
   tlContact.from(".contactContent .horizontalLine", { duration: ".3", width: "0"});

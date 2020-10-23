@@ -16,6 +16,7 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
+  background-color: #fff;
 }
 
 h1 {
@@ -72,10 +73,6 @@ nav {
   margin-left: .6rem;
   line-height: 23px;
 }
-
-/* .logoName p {
-  opacity: 1;
-} */
 
 .logoLink:hover .logo, .logoLink.hover .logo, .logoLink:hover{
   fill: #92b4dd;
@@ -321,7 +318,7 @@ nav {
   width: 100%;
 
   background-image: url(../resources/HeroImage.svg);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
 }
 
@@ -394,7 +391,7 @@ nav {
 .mainContent {
   /* margin: 5vw; */
   font-size: 19px;
-  background: repeat url(../resources/noise.png) 0 0;
+  /* background: repeat url(../resources/noise.png) 0 0; */
 }
 
 .container {
@@ -417,6 +414,10 @@ section {
 /* -- About Me CSS -- */
 #about {
   padding-top: 5rem;
+  background-position: bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url(../resources/WtoB.svg);
 }
 
 .profilePic {
@@ -497,7 +498,7 @@ section {
 }
 
 .headerSpacer{
-  height: 9rem;
+  height: 8rem;
 }
 
 .column2 p {
@@ -505,7 +506,9 @@ section {
 }
 
 .aboutWords {
+  background-color: rgba(255,255,255,.65);
   min-width: 16rem;
+  padding-bottom: .5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -557,8 +560,14 @@ section {
 
 /* -- Skills CSS -- */
 #skills {
+  /* padding-top: 1.5rem; */
   background-color: #121416;
+  background-image: url(../resources/BtoW.svg);
+  background-position: bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   color: #ece8e1;
+  /* box-shadow: 0px 2px 3px #000; */
 }
 
 #skills>.sectionBox {
@@ -567,7 +576,7 @@ section {
 }
 
 .skillsWords {
-  width: 45%;
+  width: 52%;
   display: flex;
   /* align-items: center; */
   flex-direction: column;
@@ -594,7 +603,8 @@ section {
 }
 
 .skillsDescription {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  background-color: rgba(18,20,22,.65);
 }
 
 .skillsLists{
@@ -614,16 +624,17 @@ section {
 
 .skillsBox {
   padding-left: 5%;
-  /* display: grid; */
+  display: grid;
   margin-top: 1rem;
-  /* grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-  grid-gap: .5rem; */
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  grid-gap: .5rem;
 }
 
 .skillItem{
     display: flex;
     padding: .5rem 1rem;
     border: 2px solid #364145;
+    background-color: #121416;
 }
 
 @media screen and (max-width: 768px) {
@@ -631,9 +642,20 @@ section {
     width: 100%;
     padding: 1rem;
   }
+
+  .development {
+    margin-top: 1rem;
+  }
 }
 
 /* -- Works CSS --*/
+#works {
+  background-position: bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url(../resources/WtoB.svg);
+}
+
 #works>.sectionBox{
   flex-direction: column;
   width: 100%
@@ -679,6 +701,7 @@ section {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.1s ease;
+  box-shadow: 2px 2px 3px #000;
 }
 
 .workCard:hover{
@@ -763,7 +786,7 @@ section {
 
 .cardFull {
   margin: 5rem 0;
-  background-color: #ece8e1;
+  background-color: #fff;
   width: 600px;
   /* border-radius: 5px; */
 }
@@ -807,6 +830,7 @@ section {
   background-color: #121416;
   color: #ece8e1;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 .contactContent {
