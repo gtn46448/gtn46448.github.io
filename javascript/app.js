@@ -31,7 +31,7 @@ const pageLoad = () => {
   tl.from(".verticalLine", { duration: ".3", opacity: 0, delay: .1 });
   tl.from(".heroLine", {duration: ".4", width: "0"}, "-=.3");
   tl.from(".titleText", {duration: ".4", y: "100%" }, "-=.2");
-  tl.from(".heroTextSmall h5", {duration: ".5", y: "-120%"}, "-=.35");
+  tl.from(".heroTextSmall h2", {duration: ".5", y: "-120%"}, "-=.35");
 
   const tlAbout = gsap.timeline({scrollTrigger: { trigger: "#about", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
@@ -45,8 +45,8 @@ const pageLoad = () => {
   tlSkills.from(".skillsHeader", { duration: ".5", y: "-70%", opacity: "0" });
   tlSkills.from(".skillsWords .horizontalLine", { duration: ".2", width: "0" });
   tlSkills.from(".skillsDescription p", { duration: ".3", y: "35%", opacity: "0", stagger: ".2" }, "-=.1");
-  tlSkills.from(".skillsSubheader", { duration: ".3", x: "35%", opacity: "0", stagger: ".1"}, "-=.2");
-  tlSkills.from(".skillItem", {duration: ".25", y: "100%", opacity: "0", stagger: ".1"});
+  tlSkills.from(".skillsSubheader", { duration: ".2", x: "35%", opacity: "0", stagger: ".1"}, "-=.2");
+  tlSkills.from(".skillItem", {duration: ".15", y: "100%", opacity: "0", stagger: ".1"});
 
   const tlWorks = gsap.timeline({scrollTrigger: { trigger: "#works", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
