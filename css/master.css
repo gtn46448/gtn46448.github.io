@@ -566,7 +566,7 @@ section {
   background-position: bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  color: #ece8e1;
+  color: #ecefff;
   /* box-shadow: 0px 2px 3px #000; */
 }
 
@@ -626,7 +626,7 @@ section {
   padding-left: 5%;
   display: grid;
   margin-top: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(7.7rem, 1fr));
   grid-gap: .5rem;
 }
 
@@ -697,6 +697,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   /* border-radius: .2rem; */
   overflow: hidden;
   cursor: pointer;
@@ -708,8 +709,17 @@ section {
   /* height: 22.5rem;
   width: 15.3rem; */
   transform: scale(1.03);
-  box-shadow: 5px 5px 6px black;
+  box-shadow: 4px 4px 6px black;
   /* transform: translateY(-.5rem); */
+}
+
+.workCard:hover .cardImageBox img, .workCard.hover .cardImageBox img{
+  filter: none;
+}
+
+.cardImageBox img {
+  transition: all 0.1s ease;
+  filter: grayscale(1) sepia(1) hue-rotate(163.5deg);
 }
 
 .cardImageBox{
@@ -734,7 +744,7 @@ section {
 }
 
 .cardInfo {
-  color: #ece8e1;
+  color: #ecefff;
   height: 50%;
   display: flex;
   padding: 0 1rem;
@@ -743,13 +753,15 @@ section {
 }
 
 .cardTitle {
-  margin-top: 1rem;
+  text-align: center;
+  margin-top: .5rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .cardDescription {
-  font-size: 1.1rem;
+  margin-top: .5rem;
+  font-size: .9rem;
 }
 
 .cardOverlay {
@@ -775,17 +787,19 @@ section {
   height: 100%;
   overflow-y: scroll;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
 }
 
 .spacer {
+  height: 5rem;
+  width: 100%;
   pointer-events: none;
 }
 
 .cardFull {
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
   background-color: #fff;
   width: 600px;
   /* border-radius: 5px; */
@@ -793,7 +807,7 @@ section {
 
 .cardFullImage {
   width: 100%;
-  height: 370px;
+  /* height: 370px; */
   /* border-radius: 5px 5px 0 0; */
 }
 
@@ -813,7 +827,7 @@ section {
 }
 
 .cardFullDescription {
-  margin-top: 1rem;
+  margin: 1rem .5rem auto .5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -828,7 +842,7 @@ section {
 /* -- Contact CSS -- */
 #contact {
   background-color: #121416;
-  color: #ece8e1;
+  color: #ecefff;
   padding-bottom: 3rem;
   padding-top: 2rem;
 }
@@ -880,7 +894,7 @@ section {
 .contactButtonText {
   text-align: center;
   line-height: 3rem;
-  color: #ece8e1;
+  color: #ecefff;
   font-family: 'Poppins', sans-serif;
   position: relative;
   bottom: 3rem;
@@ -924,7 +938,7 @@ section {
 
 .endNav {
   background-color: #121416;
-  color: #ece8e1;
+  color: #ecefff;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
@@ -946,7 +960,7 @@ section {
 
 .contactIcon svg {
   height: 100%;
-  fill: #ece8e1;
+  fill: #ecefff;
 }
 
 .contactIcon:hover svg, .contactIcon.hover svg {
