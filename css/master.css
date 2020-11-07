@@ -52,6 +52,7 @@ nav {
   top: 0;
   font-family: 'Poppins', sans-serif;
   z-index: 4;
+  box-shadow: 0 10px 20px -15px #000, 0 10px 10px -15px #000;
 }
 
 .logoLink {
@@ -188,6 +189,7 @@ nav {
   display: none;
   margin: 0 .5em 0 .1rem;
   padding: 5px;
+  border-radius: 2px;
   z-index: 5;
 }
 
@@ -196,7 +198,7 @@ nav {
 }
 
 .burger:hover div, .burger.hover div {
-    background-color: #92b4dd;
+  background-color: #92b4dd;
 }
 
 .burger:active {
@@ -447,6 +449,7 @@ section {
   position: relative;
   left: 14.5rem;
   bottom: 28rem;
+  box-shadow: 8px 8px 15px -9px #000;
 }
 
 .column1>.horizontalLine {
@@ -566,7 +569,7 @@ section {
   background-position: bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  color: #ecefff;
+  color: #eef0f1;
   /* box-shadow: 0px 2px 3px #000; */
 }
 
@@ -658,7 +661,7 @@ section {
 
 #works>.sectionBox{
   flex-direction: column;
-  width: 100%
+  width: 100%;
 }
 
 .worksHeader {
@@ -687,6 +690,7 @@ section {
 .cardSpacer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   height: 23rem;
 }
 
@@ -699,17 +703,17 @@ section {
   align-items: center;
   justify-content: center;
   /* border-radius: .2rem; */
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: pointer;
   transition: all 0.1s ease;
-  box-shadow: 2px 2px 3px #000;
+  box-shadow: 8px 8px 15px -5px #000;
 }
 
 .workCard:hover{
   /* height: 22.5rem;
   width: 15.3rem; */
   transform: scale(1.03);
-  box-shadow: 4px 4px 6px black;
+  box-shadow: 10px 10px 17px -6px #000;
   /* transform: translateY(-.5rem); */
 }
 
@@ -719,11 +723,11 @@ section {
 
 .cardImageBox img {
   transition: all 0.1s ease;
-  filter: grayscale(1) sepia(1) hue-rotate(163.5deg);
+  filter: grayscale(1) sepia(1) hue-rotate(163.5deg) brightness(.8);
 }
 
 .cardImageBox{
-  height: 50%;
+  height: 60%;
   width: 100%;
 }
 
@@ -744,24 +748,26 @@ section {
 }
 
 .cardInfo {
-  color: #ecefff;
-  height: 50%;
-  display: flex;
+  position: relative;
+  bottom: 1rem;
+  height: 40%;
   padding: 0 1rem;
-  flex-direction: column;
-  align-items: center;
+  overflow: hidden;
 }
 
 .cardTitle {
-  text-align: center;
+  /* text-align: center; */
   margin-top: .5rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
+  color: #eef0f1;
 }
 
 .cardDescription {
-  margin-top: .5rem;
+  margin: .3rem 0;
   font-size: .9rem;
+  line-height: 1.3rem;
+  color: #c7ced1;
 }
 
 .cardOverlay {
@@ -780,6 +786,7 @@ section {
 .open {
   opacity: 1;
   pointer-events: all;
+  backdrop-filter: blur(2px);
 }
 
 .cardFullBox {
@@ -793,7 +800,7 @@ section {
 }
 
 .spacer {
-  height: 5rem;
+  height: 3rem;
   width: 100%;
   pointer-events: none;
 }
@@ -803,6 +810,35 @@ section {
   background-color: #fff;
   width: 600px;
   /* border-radius: 5px; */
+}
+
+.cardFullCloseButton {
+  height: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cardFullCloseBox {
+  padding: .5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.cardFullCloseButton svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  pointer-events: none;
+  /* fill: #121416; */
+  fill: #eef0f1;
+  mix-blend-mode: difference;
+  opacity: .5;
+}
+
+.cardFullCloseBox:hover svg, .cardFullCloseBox.hover svg {
+  opacity: 1;
 }
 
 .cardFullImage {
@@ -834,15 +870,12 @@ section {
   .cardFull {
     width: 320px;
   }
-  .cardFullImage {
-    height: 200px;
-  }
 }
 
 /* -- Contact CSS -- */
 #contact {
   background-color: #121416;
-  color: #ecefff;
+  color: #eef0f1;
   padding-bottom: 3rem;
   padding-top: 2rem;
 }
@@ -894,7 +927,7 @@ section {
 .contactButtonText {
   text-align: center;
   line-height: 3rem;
-  color: #ecefff;
+  color: #eef0f1;
   font-family: 'Poppins', sans-serif;
   position: relative;
   bottom: 3rem;
@@ -938,7 +971,7 @@ section {
 
 .endNav {
   background-color: #121416;
-  color: #ecefff;
+  color: #eef0f1;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
@@ -960,7 +993,8 @@ section {
 
 .contactIcon svg {
   height: 100%;
-  fill: #ecefff;
+  width: 2rem;
+  fill: #eef0f1;
 }
 
 .contactIcon:hover svg, .contactIcon.hover svg {

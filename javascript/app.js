@@ -54,7 +54,7 @@ const pageLoad = () => {
   tlWorks.from(".worksTitle .horizontalLine", { duration: ".2", width: "0" });
   tlWorks.from(".workCard", { y: "50%", opacity: "0", duration: "0.3", stagger: "0.2" });
   tlWorks.from(".workCard", { scale: "1.05", duration: "0.3", stagger: "0.2"}, "<.5");
-  tlWorks.fromTo(".workCard", { boxShadow: "6px 6px 7px #000" }, { boxShadow: "2px 2px 3px #000", duration: "0.3", stagger: "0.2"}, "<");
+  tlWorks.from(".workCard", 0.3, { boxShadow: "8px 8px 17px 1px #000", stagger: 0.2}, "<");
   tlWorks.to(".workCard", {clearProps: "all", stagger: "0.3"}, "<.3");
 
   const tlContact = gsap.timeline({scrollTrigger: { trigger: "#contact", start: "50% bottom"}, defaults: {ease: "power1.out"}})
@@ -109,8 +109,8 @@ const overlayCreate = () => {
       cardOverlay.setAttribute('aria-hidden', false);
 
       const fullImage = document.querySelector('.cardFullImage');
-      const cardImage = workCard.querySelector('.cardPreviewImage');
-      fullImage.setAttribute('src', cardImage.getAttribute('src'))
+      const cardImage = workCard.getAttribute('imageFull');
+      fullImage.setAttribute('src', cardImage);
 
       const fullTitle = document.querySelector('.cardFullTitle');
       const cardTitle = workCard.querySelector('.cardTitle');
