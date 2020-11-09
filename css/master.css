@@ -789,7 +789,6 @@ section {
 .open {
   opacity: 1;
   pointer-events: all;
-  /* backdrop-filter: blur(2px); */
 }
 
 .cardFullBox {
