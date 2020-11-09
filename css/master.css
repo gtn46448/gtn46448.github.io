@@ -545,6 +545,7 @@ section {
     align-items: flex-end;
     color: #121416;
     width: 100%;
+    box-shadow: none;
   }
 
   .aboutWords {
@@ -788,7 +789,7 @@ section {
 .open {
   opacity: 1;
   pointer-events: all;
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
 }
 
 .cardFullBox {
@@ -796,7 +797,6 @@ section {
   height: 100%;
   overflow-y: scroll;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
 }
