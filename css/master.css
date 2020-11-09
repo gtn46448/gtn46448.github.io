@@ -911,6 +911,7 @@ section {
   height: 3rem;
   text-decoration: none;
   overflow: hidden;
+  box-shadow: 8px 8px 15px -5px #000;
 }
 
 .sliderBox {
