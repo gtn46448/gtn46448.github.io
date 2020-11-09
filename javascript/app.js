@@ -23,8 +23,8 @@ const pageLoad = () => {
 
   const tl = gsap.timeline();
 
-  tl.from(".logoName p", { duration: .7, x: "-100%", opacity: 0, delay: .3 });
-  tl.from(".logo", { duration: .7, rotation: "720", opacity: 0 }, "-=.7");
+  tl.from(".logo", { duration: .7, rotation: "720", opacity: 0});
+  // tl.from(".logoName p", { duration: .7, x: "-100%", opacity: 0 }, "-=.7");
   tl.from(".navLinks li", { duration: .4, opacity: 0, y: "-5", stagger: .1 }, "-=.5");
   tl.from(".burger", {duration: .1, opacity: 0, y: "-5"}, "-=.2")
   tl.from(".resumeButton", { duration: .1, opacity: 0, y: "-5"}, "-=.1");
