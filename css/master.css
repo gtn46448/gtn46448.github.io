@@ -56,7 +56,7 @@ nav {
 }
 
 .logoLink {
-  height: 30px;
+  height: 32px;
   display: flex;
   color: #fff;
   text-decoration: none;
@@ -64,8 +64,8 @@ nav {
 }
 
 .logo {
-  height: 30px;
-  width: 30px;
+  height: 32px;
+  width: 32px;
   fill: #fff;
 }
 
@@ -73,7 +73,7 @@ nav {
   overflow: hidden;
   font-size: 17px;
   margin-left: .6rem;
-  line-height: 23px;
+  line-height: 32px;
 }
 
 .logoLink:hover .logo, .logoLink.hover .logo, .logoLink:hover{

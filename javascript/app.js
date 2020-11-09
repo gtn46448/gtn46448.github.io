@@ -9,29 +9,45 @@ window.addEventListener("resize", () => {
   nav.classList.remove('navActive')
 })
 
+const scrollAdjust = () => {
+  console.log("ran")
+  //first half of adjusting for scrollbar widths
+  const w1 = document.body.clientWidth;
+  document.body.classList.remove("noScroll");
+  const w2 = document.body.clientWidth;
+  console.log(w2 - w1);
+  document.querySelector('.nav').style.padding = `0px ${w1-w2}px 0px 0px`;
+  document.querySelector('.navLinks').style.right = `${w1-w2}px`;
+}
+
 // everything GSAP + navbar padding adjustments
 const pageLoad = () => {
-  const w1 = document.body.clientWidth;
   document.body.classList.add("noScroll");
-  const w2 = document.body.clientWidth;
-  document.body.classList.remove("noScroll");
-  document.querySelector('.nav').style.padding = `0px ${w2-w1}px 0px 0px`;
-  document.querySelector('.navLinks').style.right = `${w2-w1}px`
-
-  //everything GSAP
+  //preload page GSAP
   gsap.registerPlugin(ScrollTrigger);
 
   const tl = gsap.timeline();
+  
+  tl.from(".loadWheel", {duration: 1, rotation: "180", ease: "sine.out"});
+  tl.to(".loadWheel", {duration: .1, height: "15rem", width: "15rem", delay: .2});
+
+  tl.to(".loadInner", {duration: .1, opacity: 1});
+  tl.to(".preload", {duration: .1, backgroundColor: "#2d3639"}, "<")
+  tl.to(".loadWheel", {duration: .3, opacity: 0, delay: 1});
+  tl.add(scrollAdjust);
+  tl.to(".preload", {duration: .4, height: 0});
+
+  //everything else GSAP
 
   tl.from(".logo", { duration: .7, rotation: "720", opacity: 0});
-  // tl.from(".logoName p", { duration: .7, x: "-100%", opacity: 0 }, "-=.7");
+  tl.from(".logoName", { duration: .7, x: "-100%", opacity: 0 }, "-=.7");
   tl.from(".navLinks li", { duration: .4, opacity: 0, y: "-5", stagger: .1 }, "-=.5");
   tl.from(".burger", {duration: .1, opacity: 0, y: "-5"}, "-=.2")
   tl.from(".resumeButton", { duration: .1, opacity: 0, y: "-5"}, "-=.1");
   tl.from(".verticalLine", { duration: ".3", opacity: 0, delay: .1 });
-  tl.from(".heroLine", {duration: ".4", width: "0"}, "-=.3");
-  tl.from(".titleText", {duration: ".4", y: "100%" }, "-=.2");
-  tl.from(".heroTextSmall h2", {duration: ".5", y: "-120%"}, "-=.35");
+  tl.from(".heroLine", {duration: ".5", width: "0"}, "-=.8");
+  tl.from(".titleText", {duration: ".5", y: "100%" }, "-=.7");
+  tl.from(".heroTextSmall h2", {duration: ".6", y: "-120%"}, "-=.65");
 
   const tlAbout = gsap.timeline({scrollTrigger: { trigger: "#about", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
@@ -110,6 +126,8 @@ const overlayCreate = () => {
 
       const fullImage = document.querySelector('.cardFullImage');
       const cardImage = workCard.getAttribute('imageFull');
+      //backup in case fullImage not yet loaded
+      fullImage.setAttribute('src', workCard.querySelector('.cardPreviewImage').getAttribute('src'));
       fullImage.setAttribute('src', cardImage);
 
       const fullTitle = document.querySelector('.cardFullTitle');
