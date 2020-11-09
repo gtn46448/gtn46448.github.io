@@ -10,12 +10,10 @@ window.addEventListener("resize", () => {
 })
 
 const scrollAdjust = () => {
-  console.log("ran")
   //first half of adjusting for scrollbar widths
   const w1 = document.body.clientWidth;
   document.body.classList.remove("noScroll");
   const w2 = document.body.clientWidth;
-  console.log(w2 - w1);
   document.querySelector('.nav').style.padding = `0px ${w1-w2}px 0px 0px`;
   document.querySelector('.navLinks').style.right = `${w1-w2}px`;
 }
