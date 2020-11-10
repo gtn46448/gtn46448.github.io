@@ -406,6 +406,9 @@ section {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .sectionBox {
@@ -417,9 +420,6 @@ section {
 /* -- About Me CSS -- */
 #about {
   padding-top: 5rem;
-  background-position: bottom;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   background-image: url(../resources/WtoB.svg);
 }
 
@@ -510,12 +510,17 @@ section {
 }
 
 .aboutWords {
-  background-color: rgba(255,255,255,.65);
+  background-color: rgba(255,255,255,.75);
   min-width: 16rem;
   padding-bottom: .5rem;
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    background-size: auto 100vh;
+    background-repeat: repeat-x;
+  }
+
   .container {
     padding: 1rem;
   }
@@ -568,9 +573,6 @@ section {
   /* padding-top: 1.5rem; */
   background-color: #121416;
   background-image: url(../resources/BtoW.svg);
-  background-position: bottom;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   color: #eef0f1;
   /* box-shadow: 0px 2px 3px #000; */
 }
@@ -609,7 +611,7 @@ section {
 
 .skillsDescription {
   /* margin-top: 1rem; */
-  background-color: rgba(18,20,22,.65);
+  background-color: rgba(18,20,22,.75);
 }
 
 .skillsLists{
@@ -656,9 +658,6 @@ section {
 
 /* -- Works CSS --*/
 #works {
-  background-position: bottom;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   background-image: url(../resources/WtoB.svg);
 }
 

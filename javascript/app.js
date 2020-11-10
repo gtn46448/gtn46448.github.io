@@ -26,26 +26,27 @@ const pageLoad = () => {
 
   const tl = gsap.timeline();
   
-  tl.from(".loadWheel", {duration: 1, rotation: "180", ease: "sine.out"});
+  tl.from(".loadWheel", {duration: .7, rotation: "180", ease: "sine.out"});
   tl.to(".loadWheel", {duration: .1, height: "15rem", width: "15rem", delay: .2});
 
   tl.to(".loadInner", {duration: .1, opacity: 1});
   tl.to(".preload", {duration: .1, backgroundColor: "#2d3639"}, "<")
-  tl.to(".loadWheel", {duration: .3, opacity: 0, delay: 1});
+  tl.to(".loadWheel", {duration: .3, opacity: 0, delay: .7});
   tl.add(scrollAdjust);
   tl.to(".preload", {duration: .4, height: 0});
+  tl.to(".preload", {duration: 0, display: "none"})
 
   //everything else GSAP
 
-  tl.from(".logo", { duration: .7, rotation: "720", opacity: 0});
-  tl.from(".logoName", { duration: .7, x: "-100%", opacity: 0 }, "-=.7");
+  tl.from(".logo", { duration: .6, rotation: "720", opacity: 0});
+  tl.from(".logoName div", { duration: .6, x: "-100%", opacity: 0 }, "-=.7");
   tl.from(".navLinks li", { duration: .4, opacity: 0, y: "-5", stagger: .1 }, "-=.5");
   tl.from(".burger", {duration: .1, opacity: 0, y: "-5"}, "-=.2")
   tl.from(".resumeButton", { duration: .1, opacity: 0, y: "-5"}, "-=.1");
   tl.from(".verticalLine", { duration: ".3", opacity: 0, delay: .1 });
-  tl.from(".heroLine", {duration: ".5", width: "0"}, "-=.8");
-  tl.from(".titleText", {duration: ".5", y: "100%" }, "-=.7");
-  tl.from(".heroTextSmall h2", {duration: ".6", y: "-120%"}, "-=.65");
+  tl.from(".heroLine", {duration: ".5", width: "0"}, "-=.9");
+  tl.from(".titleText", {duration: ".5", y: "100%" }, "-=.8");
+  tl.from(".heroTextSmall h2", {duration: ".6", y: "-120%"}, "-=.75");
 
   const tlAbout = gsap.timeline({scrollTrigger: { trigger: "#about", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
