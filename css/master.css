@@ -77,8 +77,8 @@ nav {
 }
 
 .logoLink:hover .logo, .logoLink.hover .logo, .logoLink:hover{
-  fill: #92b4dd;
-  color: #92b4dd;
+  fill: #5f93c9;
+  color: #5f93c9;
 }
 
 .navButtons {
@@ -128,9 +128,9 @@ nav {
 
 .navLinks a:hover {
   background: #242a2e;
-  color: #92b4dd;
+  color: #5f93c9;
   transition: color .5s ease, background-color 1s ease;
-  border-bottom: #92b4dd 2px solid;
+  border-bottom: #5f93c9 2px solid;
 }
 
 .navLinks a:active {
@@ -172,12 +172,12 @@ nav {
 
 .resumeButton:hover{
   background-color: #242a2e;
-  border-color: #92b4dd;
+  border-color: #5f93c9;
   transition: background-color .5s ease;
 }
 
 .resumeButton:hover a, .resumeButton.hover a {
-    color: #92b4dd;
+    color: #5f93c9;
     /* transition: color .5s ease; */
 }
 
@@ -199,7 +199,7 @@ nav {
 }
 
 .burger:hover div, .burger.hover div {
-  background-color: #92b4dd;
+  background-color: #5f93c9;
 }
 
 .burger:active {
@@ -263,9 +263,9 @@ nav {
 
   .navLinks a:hover {
     background: #242a2e;
-    color: #92b4dd;
+    color: #5f93c9;
     transition: color .5s ease, background .5s ease;
-    border-left: #92b4dd 2px solid;
+    border-left: #5f93c9 2px solid;
     border-bottom: 2px solid transparent;
   }
 }
@@ -309,7 +309,7 @@ nav {
 
 .hero {
   height: 100vh;
-  background-color: #0e1324;
+  background-color: #0d1926;
   padding: 0;
   justify-content: center;
   align-items: center;
@@ -365,7 +365,7 @@ nav {
 }
 
 .myName {
-  color: #a2bfe2;
+  color: #5f93c9;
 }
 
 .heroTextSmall h2 {
