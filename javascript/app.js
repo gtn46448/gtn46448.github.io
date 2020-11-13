@@ -10,7 +10,7 @@ window.addEventListener("resize", () => {
 })
 
 const scrollAdjust = () => {
-  //first half of adjusting for scrollbar widths
+  //adjusting for scrollbar widths
   const w1 = document.body.clientWidth;
   document.body.classList.remove("noScroll");
   const w2 = document.body.clientWidth;
@@ -20,21 +20,19 @@ const scrollAdjust = () => {
 
 // everything GSAP + navbar padding adjustments
 const pageLoad = () => {
-  document.body.classList.add("noScroll");
   //preload page GSAP
-  gsap.registerPlugin(ScrollTrigger);
 
   const tl = gsap.timeline();
-  
-  tl.from(".loadWheel", {duration: .7, rotation: "180", ease: "sine.out"});
-  tl.to(".loadWheel", {duration: .1, height: "15rem", width: "15rem", delay: .2});
 
-  tl.to(".loadInner", {duration: .1, opacity: 1});
-  tl.to(".preload", {duration: .1, backgroundColor: "#2d3639"}, "<")
-  tl.to(".loadWheel", {duration: .3, opacity: 0, delay: .7});
+  tl.to(".introScreen", {duration: 0, display: "flex"})
+  tl.from(".introWheel", {duration: .7, rotation: "180", ease: "sine.out"});
+  tl.to(".introWheel", {duration: .1, height: "15rem", width: "15rem", delay: .2});
+  tl.to(".introInner", {duration: .1, opacity: 1});
+  tl.to(".introScreen", {duration: .1, backgroundColor: "#2d3639"}, "<")
+  tl.to(".introWheel", {duration: .3, opacity: 0, delay: .7});
   tl.add(scrollAdjust);
-  tl.to(".preload", {duration: .4, height: 0});
-  tl.to(".preload", {duration: 0, display: "none"})
+  tl.to(".introScreen", {duration: .4, height: 0});
+  tl.to(".introScreen", {duration: 0, display: "none"})
 
   //everything else GSAP
 
@@ -47,6 +45,8 @@ const pageLoad = () => {
   tl.from(".heroLine", {duration: ".5", width: "0"}, "-=.9");
   tl.from(".titleText", {duration: ".5", y: "100%" }, "-=.8");
   tl.from(".heroTextSmall h2", {duration: ".6", y: "-120%"}, "-=.75");
+
+  gsap.registerPlugin(ScrollTrigger);
 
   const tlAbout = gsap.timeline({scrollTrigger: { trigger: "#about", start: "top 70%"}, defaults: {ease: "power1.out"}});
 
