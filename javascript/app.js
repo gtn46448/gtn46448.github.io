@@ -20,6 +20,7 @@ const scrollAdjust = () => {
 
 // everything GSAP + navbar padding adjustments
 const pageLoad = () => {
+  document.body.classList.add('noScroll');
   //preload page GSAP
 
   const tl = gsap.timeline();
