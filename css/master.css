@@ -854,19 +854,51 @@ section {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 2rem;
+  line-height: 2.5rem;
+  /* width: 100%; */
+  text-align: center;
 }
 
 .cardFullInfo>.horizontalLine {
   border-top: 2px solid #3b74ba;
-  width: 5.5rem;
+  width: 50px;
 }
 
-.cardFullInfo>.horizontalLine::before {
-  background-color: #3b74ba;
+.cardFullLinks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cardFullLinks a {
+  text-decoration: none;
+  color: #364145;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin: .2rem .6rem .1rem 0;
+}
+
+.cardFullLinkImage svg{
+  fill: #364145;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: .2rem .2rem 0 0;
+  padding-top: .2rem;
+}
+
+.cardFullLinks a:hover{
+  color: #3b74ba;
+}
+
+.cardFullLinks a:hover svg, .cardFullLinks a.hover svg {
+  fill: #3b74ba;
 }
 
 .cardFullDescription {
-  margin: 1rem .5rem auto .5rem;
+  margin: 0 0 auto 0;
 }
 
 @media screen and (max-width: 768px) {
