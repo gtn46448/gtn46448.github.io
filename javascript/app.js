@@ -26,6 +26,7 @@ const pageLoad = () => {
   const tl = gsap.timeline();
 
   // tl.to(".introScreen", {duration: 0, display: "flex"})
+  tl.to(".introScreen", {duration: 0, opacity: 1});
   tl.from(".introWheel", {duration: .7, rotation: "180", ease: "sine.out"});
   tl.to(".introWheel", {duration: .1, height: "15rem", width: "15rem", delay: .2});
   tl.to(".introInner", {duration: .1, opacity: 1});
@@ -33,7 +34,7 @@ const pageLoad = () => {
   tl.to(".introWheel", {duration: .3, opacity: 0, delay: .7});
   tl.add(scrollAdjust);
   tl.to(".introScreen", {duration: .4, height: 0});
-  tl.to(".introScreen", {duration: 0, display: "none"})
+  tl.to(".introScreen", {duration: 0, display: "none"});
 
   //everything else GSAP
 
