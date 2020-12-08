@@ -431,7 +431,7 @@ section {
   height: 30rem;
   filter: grayscale(100%);
 
-  background-image: url(../resources/profile2.jpg);
+  background-image: url(../resources/profile.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -649,9 +649,13 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .skillsWords, .skillsLists{
+  .skillsWords {
     width: 100%;
     padding: 1rem;
+  }
+
+  .skillsLists {
+    display: none;
   }
 
   .development {
