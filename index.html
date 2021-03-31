@@ -35,6 +35,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#works">Works</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="https://just-bloggn.netlify.app/">Blog</a></li>
       </ul>
       <div class="resumeButtonContainer">
         <div class="verticalLine"></div>
@@ -91,7 +92,7 @@
           <div class="horizontalLine"></div>
           <div class="skillsDescription container">
             <p>
-              While the vast majority of my experience lies in Java programming, I am comfortable with Python and JavaScript, and I have learned the basics of PHP and SQL. I have made a game or two using Unity, and have dabbled in learning about Go and Rust.
+              While the vast majority of my education involved Java and Python programming, I am comfortable with JavaScript, having learned the MERN stack for full-stack development. I have also learned the basics of PHP and SQL. I have made a game or two using Unity, and have dabbled in learning about Go and Rust.
             </p>
             <p>
               I have a solid understanding of algorithms and data strucutres, and have had some experience working in an agile/SCRUM-like environment.
@@ -109,6 +110,10 @@
               <div class="skillItem">HTML</div>
               <div class="skillItem">CSS</div>
               <div class="skillItem">JavaScript</div>
+              <div class="skillItem">MongoDB</div>
+              <div class="skillItem">Express</div>
+              <div class="skillItem">React</div>
+              <div class="skillItem">Node.js</div>
               <div class="skillItem">Python</div>
               <div class="skillItem">PHP</div>
               <div class="skillItem">SQL</div>
@@ -120,6 +125,7 @@
             <div class="skillsBox">
               <div class="skillItem">Photoshop</div>
               <div class="skillItem">Illustrator</div>
+              <div class="skillItem">Inkscape</div>
               <div class="skillItem">XD</div>
               <div class="skillItem">Figma</div>
               <div class="skillItem">Blender</div>
@@ -135,6 +141,22 @@
           <div class="horizontalLine"></div>
         </div>
         <div class="gallery container">
+          <div class="cardSpacer">
+            <div class="workCard" descFull="<p>This project was a blog intended to demonstrate my understanding of the basics of MongoDB, Express, React, and Node.js. The blog allows certain designated users to create, edit, and delete posts. Oher logged in users can log in and like these posts.</p>
+              <p>Users can log in via Google OAuth, or can create accounts unique to the blog. Accounts that are unique to the blog have their passwords hashed using bcrypt before being stored in the database.</p>
+              <p>The back-end uses MongoDB to store data, and functions as a REST API with Mongoose used to model data. The back-end is connected to the front-end using axios and CORS.</p>
+              <p>The front-end uses React to create the various displayed components, and Redux to manage data received from the back-end. Material-ui is used for structure, and allows the website to responsively adjust to mobile devices.</p>"
+              imageFull="resources/GNBlogDisplaysFull.png"
+              cardLinks="site https://just-bloggn.netlify.app/ github https://github.com/gtn46448/gn-personal-blog-v1">
+              <div class="cardImageBox">
+                <img class="cardPreviewImage" src="resources/GNBlogDisplays.png" alt="Laptop and phone screens showing blog site"></img>
+              </div>
+              <div class="cardInfo">
+                <div class="cardTitle">Personal Blog</div>
+                <p class="cardDescription">A web app built with the MERN stack allowing users to log in to like and comment on posts</p>
+              </div>
+            </div>
+          </div>
           <div class="cardSpacer">
             <div class="workCard" descFull="<p>This was a project to help me brush up on my JavaScript abilities, review sorting algorithms, and make design decisions. The resulant web app covers bubble sort, quick sort, merge sort, radix sort, and selection sort. It provides a visual representation for each, alongside psudocode, and time and space compexity. Given that there needed to be a delay displayed between the steps involved in sorting, most of the sorting algorithm functions had to be done asynchronously.</p>
               <p>I created the logo and control buttons in Inkscape, chose the color palette, and designed the layout. The layout was designed with responsiveness in mind, and with the intent of requiring a relatively minimal amount of mouse movement for adjusting settings.</p>"

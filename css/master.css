@@ -225,7 +225,7 @@ nav {
   .navLinks{
     position: absolute;
     /* right: 0px; */
-    height: 180px;
+    height: 225px;
     top: 55px;
     flex-direction: column;
     background-color: #364145;
@@ -293,16 +293,6 @@ nav {
     transform: translateY(0px);
   }
 }
-
-/* .toggle .line1 {
-  transform: rotate(225deg) translate(-5px, -5px);
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(315deg) translate(5px, -5px);
-} */
 
 .toggle {
   background-color: #242a2e;
